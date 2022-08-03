@@ -2,6 +2,11 @@ import os
 import time
 import getpass
 
+try:
+	input = raw_input
+except NameError:
+	pass
+
 run_count = input("input run count: ") 
 run_delay = input("input delay (s): ") 
 run_user = input("user: ") 
