@@ -57,7 +57,7 @@ for d in dev_list:
 	now = datetime.datetime.now()
 	parse_lib.dump_result('output_raw/' + o_file_name +  '_' + str(now.hour) + '_' + str(now.minute) + '.txt', cmd_out)
 	
-        l_mac = None       
+	l_mac = None       
 	if(d['vendor']=='eltex'):
 		if ('mes3100' in d['model']):
 			l_mac = parse_lib.parse_mac_eltex_mes_3100(cmd_out)			
@@ -98,5 +98,5 @@ for d in dev_list:
 		if('ws3700' in d['model']):
 			l_mac = parse_lib.parse_mac_cisco_ws_3700(cmd_out)
 			
-        if(l_mac is not None):
-                lib.print_result('output/' + o_file_name +  '_' + str(now.hour) + '_' + str(now.minute) + '.csv', [], l_mac, False)
+	if(l_mac is not None):
+		lib.print_result('output/' + o_file_name +  '_' + str(now.hour) + '_' + str(now.minute) + '.csv', [], l_mac, False)
