@@ -100,4 +100,3 @@ for d in dev_list:
 			
         if(l_mac is not None):
                 lib.print_result('output/' + o_file_name +  '_' + str(now.hour) + '_' + str(now.minute) + '.csv', [], l_mac, False)
-                
