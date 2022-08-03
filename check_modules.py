@@ -1,26 +1,24 @@
 import os
 import sys
+import importlib
 
-needed = []
+needed = {}
 
 with open('modules.txt', 'r') as f:
         for l in f.readlines():
                 if(l != ''):
-                        needed.append(l.replace('\n', ''))
+                        l = l.replace('\n', '')
+                        module = l.split(' ')[0]
+                        package = l.split(' ')[1]
+                        needed[module]= package
 
-installed = sys.modules.keys()
-
-for n in needed:
-        found = False
-        for i in installed:
-                if(n == i):
-                        found = True
-                        
-        if(found == False):
-                print(n + ' not found... Installing...')
-                os.system("pip install " + n)
-        if(found == True):
-                print(n + ' found.')
+for m in needed:
+        try:
+                print('Checking if ' + m + ' installed...')
+                importlib.import_module(m)
+        except ImportError as ex:
+                print(m + ' not found... Installing...')
+                os.system("pip install " + needed[m])
 
 print('')
 print('Done.')
