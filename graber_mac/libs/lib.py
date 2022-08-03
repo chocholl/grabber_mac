@@ -195,7 +195,7 @@ def print_result(p_f_name, p_keys_list, p_dict_list, is_screen=False):
 		out = out + pp + ';'
 	out = out[:-1]
 	if (is_screen==True):
-		print out
+		print(out)
 	f.write(out+"\n")
 
 	for ss in p_dict_list:
@@ -204,7 +204,7 @@ def print_result(p_f_name, p_keys_list, p_dict_list, is_screen=False):
 			out = out + str(ss.get(pp, '')) + ';'
 		out = out[:-1]
 		if (is_screen==True):
-			print out
+			print(out)
 		f.write(out+"\n")
 
 	f.close() 
