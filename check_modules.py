@@ -20,5 +20,4 @@ for m in needed:
                 print(m + ' not found... Installing...')
                 os.system("pip install " + needed[m])
 
-print('')
 print('Done.')

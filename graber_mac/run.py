@@ -4,7 +4,7 @@ import getpass
 
 run_count = input("input run count: ") 
 run_delay = input("input delay (s): ") 
-run_user = raw_input("user: ") 
+run_user = input("user: ") 
 run_pwd = getpass.getpass(prompt='Password: ')
 
 i = 0

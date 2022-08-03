@@ -17,7 +17,7 @@ g_user = sys.argv[1]
 g_pwd = sys.argv[2]
 
 for d in dev_list:
-	print d
+	print(d)
 	cmd_out = ''
 	o_file_name = 'mac-' + d['name']
 
@@ -52,7 +52,7 @@ for d in dev_list:
 
 
 	if(cmd_out==''):
-		print 'no data'
+		print('no data')
 		sys.exit()
 	now = datetime.datetime.now()
 	parse_lib.dump_result('output_raw/' + o_file_name +  '_' + str(now.hour) + '_' + str(now.minute) + '.txt', cmd_out)
