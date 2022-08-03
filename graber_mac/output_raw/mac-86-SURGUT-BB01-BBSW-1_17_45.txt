@@ -1,0 +1,5 @@
+
+Login incorrect
+login: show ethernet-switching table | no-more
+exit
+password: 
