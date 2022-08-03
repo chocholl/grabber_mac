@@ -1,10 +1,11 @@
 import os
 import time
+import getpass
 
 run_count = input("input run count: ") 
 run_delay = input("input delay (s): ") 
 run_user = raw_input("user: ") 
-run_pwd = raw_input("password: ")
+run_pwd = getpass.getpass(prompt='Password: ')
 
 i = 0
 while(i<int(run_count)):

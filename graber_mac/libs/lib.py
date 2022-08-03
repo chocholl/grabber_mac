@@ -112,7 +112,7 @@ def run_cmd_telnet_juniper(p_host, p_user, p_pwd, p_cmd):
 		#resp = telnet.set_debuglevel(1000)
 		telnet.read_until("login: ", 5)
 		telnet.write(user + '\r')
-		telnet.read_until("password: ", 5)		
+		telnet.read_until("password: ", 5)
 		telnet.write(password + '\r')
 		time.sleep(3)
 		telnet.write(p_cmd+ " | no-more" + "\r\n")
